@@ -32,10 +32,10 @@
             this.palMusicPlayer = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblMusicPlayer = new System.Windows.Forms.Label();
-            this.ltvMusicPlayer = new System.Windows.Forms.ListView();
             this.btnMusicPlayer = new System.Windows.Forms.Button();
             this.axWindowsMediaPlayerMusic = new AxWMPLib.AxWindowsMediaPlayer();
             this.label1 = new System.Windows.Forms.Label();
+            this.ltvMusicPlayer = new System.Windows.Forms.ListBox();
             this.palMusicPlayer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerMusic)).BeginInit();
@@ -75,16 +75,6 @@
             this.lblMusicPlayer.TabIndex = 0;
             this.lblMusicPlayer.Text = "MusicPlayer";
             // 
-            // ltvMusicPlayer
-            // 
-            this.ltvMusicPlayer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ltvMusicPlayer.HideSelection = false;
-            this.ltvMusicPlayer.Location = new System.Drawing.Point(850, 34);
-            this.ltvMusicPlayer.Name = "ltvMusicPlayer";
-            this.ltvMusicPlayer.Size = new System.Drawing.Size(214, 430);
-            this.ltvMusicPlayer.TabIndex = 1;
-            this.ltvMusicPlayer.UseCompatibleStateImageBehavior = false;
-            // 
             // btnMusicPlayer
             // 
             this.btnMusicPlayer.BackColor = System.Drawing.Color.Red;
@@ -107,6 +97,7 @@
             this.axWindowsMediaPlayerMusic.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayerMusic.OcxState")));
             this.axWindowsMediaPlayerMusic.Size = new System.Drawing.Size(837, 430);
             this.axWindowsMediaPlayerMusic.TabIndex = 3;
+            this.axWindowsMediaPlayerMusic.Enter += new System.EventHandler(this.axWindowsMediaPlayerMusic_Enter);
             // 
             // label1
             // 
@@ -118,16 +109,25 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Developed By ChisoftMedia @ 2020";
             // 
+            // ltvMusicPlayer
+            // 
+            this.ltvMusicPlayer.FormattingEnabled = true;
+            this.ltvMusicPlayer.ItemHeight = 16;
+            this.ltvMusicPlayer.Location = new System.Drawing.Point(851, 36);
+            this.ltvMusicPlayer.Name = "ltvMusicPlayer";
+            this.ltvMusicPlayer.Size = new System.Drawing.Size(205, 420);
+            this.ltvMusicPlayer.TabIndex = 5;
+            // 
             // MusicPlayer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1068, 554);
+            this.Controls.Add(this.ltvMusicPlayer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.axWindowsMediaPlayerMusic);
             this.Controls.Add(this.btnMusicPlayer);
-            this.Controls.Add(this.ltvMusicPlayer);
             this.Controls.Add(this.palMusicPlayer);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -149,10 +149,10 @@
         private System.Windows.Forms.Panel palMusicPlayer;
         private System.Windows.Forms.Label lblMusicPlayer;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ListView ltvMusicPlayer;
         private System.Windows.Forms.Button btnMusicPlayer;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayerMusic;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox ltvMusicPlayer;
     }
 }
 

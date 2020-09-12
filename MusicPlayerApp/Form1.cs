@@ -23,6 +23,11 @@ namespace MusicPlayerApp
             this.Close();
         }
 
+        private void axWindowsMediaPlayerMusic_Enter(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayerMusic.URL = paths[ltvMusicPlayer.SelectedIndex];
+        }
+
         private void btnMusicPlayer_Click(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();
