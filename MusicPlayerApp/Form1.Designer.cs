@@ -63,6 +63,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // lblMusicPlayer
             // 
@@ -96,6 +97,7 @@
             this.btnMusicPlayer.TabIndex = 2;
             this.btnMusicPlayer.Text = "Select Song";
             this.btnMusicPlayer.UseVisualStyleBackColor = false;
+            this.btnMusicPlayer.Click += new System.EventHandler(this.btnMusicPlayer_Click);
             // 
             // axWindowsMediaPlayerMusic
             // 
